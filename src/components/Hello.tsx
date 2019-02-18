@@ -1,9 +1,12 @@
 import * as React from "react"
 
-export interface HelloProps { compiler: string, framework: string }
+export interface HelloProps {
+    firstName: string,
+    lastName: string
+}
 
 export class Hello extends React.Component<HelloProps, {}> {
     render() {
-        return <h1>Hello from {this.props.compiler} and {this.props.framework}</h1>
+        return <h1>Hello from {this.props.firstName} {this.props.lastName}</h1>
     }
 }
